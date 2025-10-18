@@ -1,0 +1,11 @@
+<template>
+  <div>
+    <UiNavigationMenu>
+      <UiNavigationMenuList>
+        <UiNavigationMenuItem>
+          <UiNavigationMenuLink>Home</UiNavigationMenuLink>
+        </UiNavigationMenuItem>
+      </UiNavigationMenuList>
+    </UiNavigationMenu>
+  </div>
+</template>
