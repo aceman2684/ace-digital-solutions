@@ -19,7 +19,7 @@ function toggleMenu(value: boolean) {
 
 <template>
   <header
-    class="sticky inset-x-0 top-0 z-50 transition-[background-color,box-shadow] duration-200 ease-out"
+    class="fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow] duration-200 ease-out"
     :class="{
       'bg-background shadow-sm': scrolled || isOpen,
       'bg-transparent shadow-none': !(scrolled || isOpen),
@@ -57,7 +57,7 @@ function toggleMenu(value: boolean) {
       <div v-if="isOpen" class="bg-background grid lg:hidden">
         <div class="overflow-hidden">
           <!-- Mobile Links -->
-          <div class="space-y-1 px-6 pt-2 pb-3">
+          <div class="space-y-1 pt-2 pb-3">
             <NavItem v-for="link in mobileLinks" :key="link.name" :to="link.to">{{ link.name }}</NavItem>
           </div>
           <div class="px-6 pt-4 pb-3">

@@ -1,6 +1,6 @@
 <template>
   <!-- Hero Section -->
-  <div class="relative isolate px-6 pt-14 lg:px-8">
+  <div class="relative isolate overflow-hidden px-6 pt-14 lg:px-8">
     <svg
       aria-hidden="true"
       class="absolute inset-0 -z-10 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-gray-200"

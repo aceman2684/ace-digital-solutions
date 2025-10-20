@@ -15,10 +15,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="bg-background relative">
-    <div class="absolute top-0 left-0 w-full">
-      <AppHeader :scrolled />
-    </div>
+  <div class="bg-background relative w-full">
+    <AppHeader :scrolled />
     <NuxtPage />
     <AppFooter />
   </div>
