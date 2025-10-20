@@ -1,4 +1,8 @@
 <script setup lang="ts">
+const { scrolled = false } = defineProps<{
+  scrolled?: boolean;
+}>();
+
 const links = [
   { name: "Home", to: "/", mobileOnly: true },
   { name: "About", to: "/about" },
@@ -14,7 +18,13 @@ function toggleMenu(value: boolean) {
 </script>
 
 <template>
-  <nav class="relative bg-white shadow-sm">
+  <nav
+    class="absolute inset-x-0 top-0 z-50 transition-[background-color,box-shadow] duration-200 ease-out"
+    :class="{
+      'bg-background shadow-sm': scrolled || isOpen,
+      'bg-transparent shadow-none': !(scrolled || isOpen),
+    }"
+  >
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 justify-between">
         <div class="flex">
