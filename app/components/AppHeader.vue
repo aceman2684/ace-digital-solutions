@@ -18,38 +18,32 @@ function toggleMenu(value: boolean) {
 </script>
 
 <template>
-  <nav
-    class="absolute inset-x-0 top-0 z-50 transition-[background-color,box-shadow] duration-200 ease-out"
+  <header
+    class="sticky inset-x-0 top-0 z-50 transition-[background-color,box-shadow] duration-200 ease-out"
     :class="{
       'bg-background shadow-sm': scrolled || isOpen,
       'bg-transparent shadow-none': !(scrolled || isOpen),
     }"
   >
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex h-16 justify-between">
-        <div class="flex">
-          <div class="flex shrink-0 items-center">
-            <NuxtImg src="/images/logo.png" alt="ACE Digital Solutions Logo" class="h-16 w-auto" />
-            <h1 class="text-lg font-bold">ACE Digital Solutions</h1>
-          </div>
-
-          <!-- Desktop Links -->
-          <div class="hidden md:ml-6 md:flex md:space-x-8">
-            <NavItem v-for="link in desktopLinks" :key="link.name" :to="link.to">
-              {{ link.name }}
-            </NavItem>
-          </div>
-        </div>
-
-        <div class="hidden md:flex md:items-center">
-          <UiButton as="a" href="/contact">Get in Touch</UiButton>
-        </div>
-
-        <div class="-mr-2 flex items-center sm:hidden">
-          <AnimatedMenuButton :value="isOpen" class="size-10" @toggled="toggleMenu" />
-        </div>
+    <nav class="flex h-16 items-center justify-between px-6 lg:px-8" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <NuxtLink to="/" class="-m-1.5 flex items-center p-1.5">
+          <NuxtImg src="/images/logo.png" alt="ACE Digital Solutions Logo" class="h-16 w-auto" />
+          <h1 class="text-lg font-bold">ACE Digital Solutions</h1>
+        </NuxtLink>
       </div>
-    </div>
+      <div class="flex lg:hidden">
+        <AnimatedMenuButton :value="isOpen" class="size-10" @toggled="toggleMenu" />
+      </div>
+      <div class="hidden lg:flex lg:h-full lg:grow lg:items-center lg:gap-x-12">
+        <NavItem v-for="link in desktopLinks" :key="link.name" :to="link.to">
+          {{ link.name }}
+        </NavItem>
+      </div>
+      <div class="hidden md:items-center lg:flex lg:flex-1 lg:justify-end">
+        <UiButton as="a" href="/contact">Get in Touch</UiButton>
+      </div>
+    </nav>
 
     <!-- Mobile Nav -->
     <Transition
@@ -60,20 +54,17 @@ function toggleMenu(value: boolean) {
       leave-from-class="grid-rows-[1fr] opacity-100"
       leave-to-class="grid-rows-[0fr] opacity-0"
     >
-      <div v-if="isOpen" class="grid md:hidden">
+      <div v-if="isOpen" class="bg-background grid lg:hidden">
         <div class="overflow-hidden">
           <!-- Mobile Links -->
-          <div class="space-y-1 pt-2 pb-3">
+          <div class="space-y-1 px-6 pt-2 pb-3">
             <NavItem v-for="link in mobileLinks" :key="link.name" :to="link.to">{{ link.name }}</NavItem>
           </div>
-
-          <div class="pt-4 pb-3">
-            <div class="flex items-center px-4 sm:px-6">
-              <UiButton as="a" href="/contact" class="w-full" size="lg">Get in Touch</UiButton>
-            </div>
+          <div class="px-6 pt-4 pb-3">
+            <UiButton as="a" href="/contact" class="w-full" size="lg">Get in Touch</UiButton>
           </div>
         </div>
       </div>
     </Transition>
-  </nav>
+  </header>
 </template>
