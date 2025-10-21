@@ -1,5 +1,11 @@
 <script setup lang="ts">
-const { scrolled = false } = defineProps<{
+const {
+  isOpen,
+  onToggleNav,
+  scrolled = false,
+} = defineProps<{
+  isOpen: boolean;
+  onToggleNav: (value: boolean) => void;
   scrolled?: boolean;
 }>();
 
@@ -9,20 +15,15 @@ const links = [
 ];
 const desktopLinks = links.filter((link) => !link.mobileOnly);
 const mobileLinks = links;
-
-const isOpen = ref(false);
-
-function toggleMenu(value: boolean) {
-  isOpen.value = value;
-}
 </script>
 
 <template>
   <header
-    class="fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow] duration-200 ease-out"
+    class="fixed inset-x-0 top-0 z-50 transition-[background-color_400ms_ease-out,box-shadow_400ms_ease-out]"
     :class="{
       'bg-background shadow-sm': scrolled || isOpen,
-      'bg-transparent shadow-none': !(scrolled || isOpen),
+      'bg-transparent shadow-none [transition:background-color_400ms_150ms_ease-out,box-shadow_400ms_150ms_ease-out]':
+        !(scrolled || isOpen),
     }"
   >
     <nav class="flex h-16 items-center justify-between px-6 lg:px-8" aria-label="Global">
@@ -33,7 +34,7 @@ function toggleMenu(value: boolean) {
         </NuxtLink>
       </div>
       <div class="flex lg:hidden">
-        <AnimatedMenuButton :value="isOpen" class="size-10" @toggled="toggleMenu" />
+        <AnimatedMenuButton :value="isOpen" class="size-10" @toggled="onToggleNav" />
       </div>
       <div class="hidden lg:flex lg:h-full lg:grow lg:items-center lg:gap-x-12">
         <NavItem v-for="link in desktopLinks" :key="link.name" :to="link.to">
