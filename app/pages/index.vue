@@ -3,54 +3,82 @@
   <div class="relative isolate overflow-hidden px-6 pt-14 lg:px-8">
     <svg
       aria-hidden="true"
-      class="absolute inset-0 -z-10 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-gray-200"
+      class="absolute inset-0 -z-10 hidden size-full mask-[radial-gradient(64rem_64rem_at_top,white,transparent)] stroke-gray-200 sm:block"
     >
       <defs>
         <pattern
-          id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc"
+          id="55d3d46d-692e-45f2-becd-d8bdc9344f45"
           width="200"
           height="200"
           x="50%"
-          y="-1"
+          y="0"
           patternUnits="userSpaceOnUse"
         >
           <path d="M.5 200V.5H200" fill="none" />
         </pattern>
       </defs>
-      <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
+      <svg x="50%" y="0" class="overflow-visible fill-gray-50">
         <path
-          d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
+          d="M-200.5 0h201v201h-201Z M599.5 0h201v201h-201Z M399.5 400h201v201h-201Z M-400.5 600h201v201h-201Z"
           stroke-width="0"
         />
       </svg>
-      <rect width="100%" height="100%" fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)" stroke-width="0" />
+      <rect width="100%" height="100%" fill="url(#55d3d46d-692e-45f2-becd-d8bdc9344f45)" stroke-width="0" />
     </svg>
     <div
       aria-hidden="true"
-      class="absolute top-10 left-[calc(50%-4rem)] -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:top-[calc(50%-30rem)] lg:left-48 xl:left-[calc(50%-24rem)]"
+      class="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
     >
       <div
         style="
           clip-path: polygon(
-            73.6% 51.7%,
-            91.7% 11.8%,
-            100% 46.4%,
-            97.4% 82.2%,
-            92.5% 84.9%,
-            75.7% 64%,
-            55.3% 47.5%,
-            46.5% 49.4%,
-            45% 62.9%,
-            50.3% 87.2%,
-            21.3% 64.1%,
-            0.1% 100%,
-            5.4% 51.1%,
-            21.4% 63.9%,
-            58.9% 0.2%,
-            73.6% 51.7%
+            74.1% 44.1%,
+            100% 61.6%,
+            97.5% 26.9%,
+            85.5% 0.1%,
+            80.7% 2%,
+            72.5% 32.5%,
+            60.2% 62.4%,
+            52.4% 68.1%,
+            47.5% 58.3%,
+            45.2% 34.5%,
+            27.5% 76.7%,
+            0.1% 64.9%,
+            17.9% 100%,
+            27.6% 76.8%,
+            76.1% 97.7%,
+            74.1% 44.1%
           );
         "
-        class="to-primary aspect-1108/632 w-277 bg-linear-to-r from-[#80caff] opacity-20"
+        class="to-primary ml-[max(50%,38rem)] aspect-1313/771 w-328.25 bg-linear-to-tr from-[#4115fc]"
+      ></div>
+    </div>
+    <div
+      aria-hidden="true"
+      class="absolute inset-x-0 top-0 -z-10 flex transform-gpu overflow-hidden pt-32 opacity-25 blur-3xl sm:pt-40 xl:justify-end"
+    >
+      <div
+        style="
+          clip-path: polygon(
+            74.1% 44.1%,
+            100% 61.6%,
+            97.5% 26.9%,
+            85.5% 0.1%,
+            80.7% 2%,
+            72.5% 32.5%,
+            60.2% 62.4%,
+            52.4% 68.1%,
+            47.5% 58.3%,
+            45.2% 34.5%,
+            27.5% 76.7%,
+            0.1% 64.9%,
+            17.9% 100%,
+            27.6% 76.8%,
+            76.1% 97.7%,
+            74.1% 44.1%
+          );
+        "
+        class="to-primary -ml-88 aspect-1313/771 w-328.25 flex-none origin-top-right rotate-30 bg-linear-to-tr from-[#4115fc] xl:mr-[calc(50%-12rem)] xl:ml-0"
       ></div>
     </div>
     <div class="py-32 sm:py-48 lg:py-56">

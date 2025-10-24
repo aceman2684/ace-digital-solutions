@@ -37,7 +37,7 @@
       <div class="flex lg:hidden">
         <AnimatedMenuButton :is-open="isOpen" class="size-10" @click="onToggleNav" />
       </div>
-      <div class="hidden lg:flex lg:h-full lg:grow lg:items-center lg:gap-x-12">
+      <div class="hidden lg:flex lg:h-full lg:grow lg:items-center lg:justify-around lg:gap-x-12">
         <NavItem v-for="link in desktopLinks" :key="link.name" :to="link.to">
           {{ link.name }}
         </NavItem>
