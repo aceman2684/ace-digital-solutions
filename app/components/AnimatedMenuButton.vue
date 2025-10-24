@@ -1,21 +1,13 @@
 <script setup lang="ts">
-const { value = false, ariaLabel = "Main Menu" } = defineProps<{
-  value?: boolean;
-  ariaLabel?: string;
-}>();
-
-const emit = defineEmits<{
-  toggled: [value: boolean];
-}>();
-
-const isOpen = computed({
-  get: () => value,
-  set: (value: boolean) => emit("toggled", value),
-});
-
-const toggleMenu = () => {
-  isOpen.value = !isOpen.value;
-};
+  const {
+    isOpen,
+    onClick,
+    ariaLabel = "Main Menu",
+  } = defineProps<{
+    isOpen: boolean;
+    onClick: () => void;
+    ariaLabel?: string;
+  }>();
 </script>
 
 <template>
@@ -24,7 +16,7 @@ const toggleMenu = () => {
     :class="{ opened: isOpen }"
     :aria-expanded="isOpen"
     :aria-label="ariaLabel"
-    @click="toggleMenu"
+    @click="onClick"
   >
     <svg class="h-full w-full" viewBox="0 0 100 100">
       <path
@@ -41,45 +33,45 @@ const toggleMenu = () => {
 </template>
 
 <style scoped>
-.line {
-  fill: none;
-  stroke: black;
-  stroke-width: 6;
-  transition:
-    stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  .line {
+    fill: none;
+    stroke: black;
+    stroke-width: 6;
+    transition:
+      stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-.line1 {
-  stroke-dasharray: 60 207;
-  stroke-width: 6;
-}
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
 
-.line2 {
-  stroke-dasharray: 60 60;
-  stroke-width: 6;
-}
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
 
-.line3 {
-  stroke-dasharray: 60 207;
-  stroke-width: 6;
-}
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
 
-.opened .line1 {
-  stroke-dasharray: 90 207;
-  stroke-dashoffset: -134;
-  stroke-width: 6;
-}
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
 
-.opened .line2 {
-  stroke-dasharray: 1 60;
-  stroke-dashoffset: -30;
-  stroke-width: 6;
-}
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
 
-.opened .line3 {
-  stroke-dasharray: 90 207;
-  stroke-dashoffset: -134;
-  stroke-width: 6;
-}
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
 </style>

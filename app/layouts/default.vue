@@ -1,22 +1,22 @@
 <script setup lang="ts">
-const isNavExpanded = ref(true);
-const scrolled = ref(false);
+  const isNavExpanded = ref(false);
+  const scrolled = ref(false);
 
-const handleToggleNav = () => {
-  isNavExpanded.value = !isNavExpanded.value;
-};
+  const handleToggleNav = () => {
+    isNavExpanded.value = !isNavExpanded.value;
+  };
 
-const handleScroll = () => {
-  scrolled.value = window.scrollY > 10;
-};
+  const handleScroll = () => {
+    scrolled.value = window.scrollY > 10;
+  };
 
-onMounted(() => {
-  window.addEventListener("scroll", handleScroll, { passive: true });
-});
+  onMounted(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+  });
 
-onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
-});
+  onUnmounted(() => {
+    window.removeEventListener("scroll", handleScroll);
+  });
 </script>
 
 <template>

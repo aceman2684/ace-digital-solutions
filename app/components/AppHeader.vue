@@ -1,20 +1,21 @@
 <script setup lang="ts">
-const {
-  isOpen,
-  onToggleNav,
-  scrolled = false,
-} = defineProps<{
-  isOpen: boolean;
-  onToggleNav: (value: boolean) => void;
-  scrolled?: boolean;
-}>();
+  const {
+    isOpen,
+    onToggleNav,
+    scrolled = false,
+  } = defineProps<{
+    isOpen: boolean;
+    onToggleNav: () => void;
+    scrolled?: boolean;
+  }>();
 
-const links = [
-  { name: "Home", to: "/", mobileOnly: true },
-  { name: "About", to: "/about" },
-];
-const desktopLinks = links.filter((link) => !link.mobileOnly);
-const mobileLinks = links;
+  const links = [
+    { name: "Home", to: "/", mobileOnly: true },
+    { name: "About", to: "/about" },
+  ];
+
+  const desktopLinks = links.filter((link) => !link.mobileOnly);
+  const mobileLinks = links;
 </script>
 
 <template>
@@ -34,7 +35,7 @@ const mobileLinks = links;
         </NuxtLink>
       </div>
       <div class="flex lg:hidden">
-        <AnimatedMenuButton :value="isOpen" class="size-10" @toggled="onToggleNav" />
+        <AnimatedMenuButton :is-open="isOpen" class="size-10" @click="onToggleNav" />
       </div>
       <div class="hidden lg:flex lg:h-full lg:grow lg:items-center lg:gap-x-12">
         <NavItem v-for="link in desktopLinks" :key="link.name" :to="link.to">

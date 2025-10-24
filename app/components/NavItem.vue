@@ -1,14 +1,14 @@
 <script setup lang="ts">
-interface NavItemProps {
-  to: string;
-  target?: string;
-  rel?: string;
-  prefetch?: boolean;
-  replace?: boolean;
-  external?: boolean;
-}
+  interface NavItemProps {
+    to: string;
+    target?: string;
+    rel?: string;
+    prefetch?: boolean;
+    replace?: boolean;
+    external?: boolean;
+  }
 
-defineProps<NavItemProps>();
+  defineProps<NavItemProps>();
 </script>
 
 <template>
