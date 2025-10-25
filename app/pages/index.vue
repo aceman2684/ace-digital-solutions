@@ -349,7 +349,13 @@
       <div class="mx-auto max-w-4xl">
         <h2 class="text-foreground text-4xl font-semibold tracking-tight sm:text-5xl">Frequently asked questions</h2>
         <dl class="divide-foreground/10 mt-16 divide-y">
-          <FaqItem v-for="(faq, index) in faqs" :key="index" :question="faq.question" :answer="faq.answer" />
+          <FaqItem
+            v-for="(faq, index) in faqs"
+            :id="index"
+            :key="index"
+            :question="faq.question"
+            :answer="faq.answer"
+          />
         </dl>
       </div>
     </div>

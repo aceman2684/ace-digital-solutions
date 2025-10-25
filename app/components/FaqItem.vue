@@ -1,13 +1,13 @@
 <script setup lang="ts">
-  defineProps<{
+  const { id, question, answer } = defineProps<{
+    id: string | number;
     question: string;
     answer: string;
   }>();
 
   const expanded = ref(false);
-  const uniqueId = Math.random().toString(36).substring(2, 9);
-  const contentId = `faq-content-${uniqueId}`;
-  const buttonId = `faq-button-${uniqueId}`;
+  const contentId = `faq-content-${id}`;
+  const buttonId = `faq-button-${id}`;
 
   function toggle() {
     expanded.value = !expanded.value;
