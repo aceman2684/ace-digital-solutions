@@ -31,13 +31,13 @@ export default defineNuxtConfig({
         // Open Graph / Facebook
         { property: "og:type", content: "website" },
         { property: "og:url", content: "https://acedigitalsolutions.dev" },
-        { property: "og:title", content: "Ace Digital Solutions" },
+        { property: "og:title", content: "ACE Digital Solutions" },
         { property: "og:description", content: "Professional digital solutions for your business" },
         { property: "og:image", content: "https://acedigitalsolutions.dev/images/og-image.png" },
         // Twitter
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:url", content: "https://acedigitalsolutions.dev" },
-        { name: "twitter:title", content: "Ace Digital Solutions" },
+        { name: "twitter:title", content: "ACE Digital Solutions" },
         { name: "twitter:description", content: "Professional digital solutions for your business" },
         { name: "twitter:image", content: "https://acedigitalsolutions.dev/images/og-image.png" },
       ],
