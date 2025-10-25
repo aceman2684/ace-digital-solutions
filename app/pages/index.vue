@@ -1,3 +1,38 @@
+<script setup lang="ts">
+  const processItems = [
+    {
+      icon: "mdi:magnify",
+      title: "Discovery",
+      description:
+        "We start by understanding your goals, challenges, and vision. This helps us create a solution that actually fits your needs—not a one-size-fits-all approach.",
+    },
+    {
+      icon: "mdi:design",
+      title: "Design & Planning",
+      description:
+        "We map out the technical approach, user experience, and project timeline together. You'll know exactly what to expect before we write a single line of code.",
+    },
+    {
+      icon: "mdi:code",
+      title: "Development",
+      description:
+        "Some clients love regular demos and staying involved throughout. Others prefer to check in at key milestones. We'll work the way that makes sense for you and your team.",
+    },
+    {
+      icon: "mdi:rocket-launch",
+      title: "Testing & Launch",
+      description:
+        "We put everything through rigorous testing to ensure it works flawlessly. Then we handle the deployment and make sure you're confident using your new solution.",
+    },
+    {
+      icon: "mdi:wrench",
+      title: "Support & Growth",
+      description:
+        "Launch is just the beginning. We provide ongoing support, monitor performance, and help you evolve the solution as your needs change.",
+    },
+  ];
+</script>
+
 <template>
   <main class="isolate">
     <!-- Hero Section -->
@@ -178,5 +213,29 @@
     </div>
 
     <!-- Process Section -->
+    <div class="isolate mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 class="text-primary text-base/7 font-semibold">How We Do It</h2>
+        <p class="text-foreground mt-2 text-4xl font-semibold tracking-tight text-pretty sm:text-5xl">
+          A Clear Path from Idea to Launch
+        </p>
+        <p class="text-muted-foreground mt-6 text-lg/8">
+          Every project is different, but our approach stays consistent—collaborative, transparent, and focused on
+          delivering real value at every stage.
+        </p>
+      </div>
+      <div class="col-span-2 mx-auto mt-16">
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-5">
+          <ProcessItem
+            v-for="(item, index) in processItems"
+            :key="item.title"
+            :icon="item.icon"
+            :title="item.title"
+            :description="item.description"
+            :class="{ 'lg:ml-2': index !== 0 }"
+          />
+        </div>
+      </div>
+    </div>
   </main>
 </template>
