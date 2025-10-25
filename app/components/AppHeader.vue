@@ -9,10 +9,7 @@
     scrolled?: boolean;
   }>();
 
-  const links = [
-    { name: "Home", to: "/", mobileOnly: true },
-    { name: "About", to: "/about" },
-  ];
+  const links = [{ name: "Home", to: "/", mobileOnly: true }];
 
   const desktopLinks = links.filter((link) => !link.mobileOnly);
   const mobileLinks = links;
