@@ -31,6 +31,54 @@
         "Launch is just the beginning. You'll get ongoing support, performance monitoring, and help evolving the solution as your needs change.",
     },
   ];
+
+  const faqs = [
+    {
+      question: "What types of organizations do you work with?",
+      answer:
+        "Primarily startups, nonprofits, and mission-driven organizations that need professional web development without enterprise pricing. Whether you're launching your first product, building community, or making social impact, if your mission matters, we'd love to talk.",
+    },
+    {
+      question: "How much does a typical project cost?",
+      answer:
+        "Pricing varies significantly based on your specific needs and project scope. The goal isn't to hit a standard rate, it's to find an approach that works within your budget while delivering real value. After our discovery call, you'll get a detailed proposal with clear pricing before any work begins. No surprise fees, no hidden costs. Whether it's a landing page or a full web application, we'll explore what's possible within your constraints.",
+    },
+    {
+      question: "How long does it take to build a website?",
+      answer:
+        "Timeline depends on scope and complexity. A landing page might take 2-3 weeks, while a full web application could take 2-3 months. During the Design & Planning phase, you'll get a detailed timeline before development starts, so you know exactly what to expect.",
+    },
+    {
+      question: "Do you offer ongoing support after launch?",
+      answer:
+        "Yes, ongoing support is available but completely optional. If you prefer to manage things yourself or have another team take over, that's perfectly fine—you'll get full documentation and a smooth transition handoff. If you do want continued partnership, support options include performance monitoring, security updates, and help evolving your solution as your needs change. Either way, you won't be left on your own.",
+    },
+    {
+      question: "What technologies do you use?",
+      answer:
+        "Modern, proven technologies that prioritize performance, security, and maintainability. The specific stack depends on your needs, but the focus is always on building something reliable that won't lock you in or become obsolete quickly.",
+    },
+    {
+      question: "Can you integrate with our existing tools?",
+      answer:
+        "Yes. API integration is a core service. Whether it's payment processors, CRMs, email services, analytics tools, or other third-party platforms, connecting your digital tools is part of what we do.",
+    },
+    {
+      question: "Do I need to be technical to work with you?",
+      answer:
+        "Not at all. The discovery and planning process is designed to translate your goals and vision into technical solutions. You'll get regular updates in plain language, and demos throughout development so you always understand what's being built.",
+    },
+    {
+      question: "What if we're not sure exactly what we need yet?",
+      answer:
+        "That's what the discovery phase is for. Many clients start with a general vision and unclear requirements. Through conversation and collaboration, we'll map out exactly what you need, what you don't, and what makes sense for your budget and timeline.",
+    },
+    {
+      question: "Can you work with our budget constraints?",
+      answer:
+        "Budget transparency is part of the process. During discovery, we'll discuss your budget and find an approach that delivers real value within your constraints. If a full solution isn't feasible, we'll explore phased approaches or alternative options rather than overpromise.",
+    },
+  ];
 </script>
 
 <template>
@@ -213,7 +261,7 @@
     </div>
 
     <!-- Process Section -->
-    <div class="isolate mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+    <div class="isolate mx-auto max-w-7xl px-6 py-28 sm:py-32 lg:px-8">
       <div class="mx-auto max-w-2xl lg:mx-0">
         <h2 class="text-primary text-base/7 font-semibold">How It Works</h2>
         <p class="text-foreground mt-2 text-4xl font-semibold tracking-tight text-pretty sm:text-5xl">
@@ -239,7 +287,7 @@
     </div>
 
     <!-- Why Us Section -->
-    <div class="mt-32 overflow-hidden sm:mt-40">
+    <div class="overflow-hidden py-24 sm:py-32">
       <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
         <div
           class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:max-w-none lg:min-w-full lg:flex-none lg:gap-y-8"
@@ -260,9 +308,9 @@
           </div>
           <div class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
             <div class="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
-              <img
-                src="https://images.unsplash.com/photo-1670272502246-768d249768ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80"
-                alt=""
+              <NuxtImg
+                src="/images/women-laughing.jpg"
+                alt="Two happy women laughing on a couch"
                 class="aspect-7/5 w-148 max-w-none rounded-2xl bg-gray-50 object-cover max-sm:w-120"
               />
             </div>
@@ -270,9 +318,9 @@
               class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-148 lg:items-start lg:justify-end lg:gap-x-8"
             >
               <div class="order-first flex w-64 flex-none justify-end self-end max-sm:w-40 lg:w-auto">
-                <img
-                  src="https://images.unsplash.com/photo-1605656816944-971cd5c1407f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
-                  alt=""
+                <NuxtImg
+                  src="/images/women-on-beach.jpg"
+                  alt="A group of friends on a sandy beach with the sun setting in the background talking"
                   class="aspect-4/3 w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                 />
               </div>
@@ -286,13 +334,97 @@
               <div class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
                 <NuxtImg
                   src="/images/helping-hands.jpg"
-                  class="aspect-4/3 w-[24rem] max-w-none rounded-2xl object-cover"
                   alt="People with joined hands in a show of teamwork and collaboration"
+                  class="aspect-4/3 w-[24rem] max-w-none rounded-2xl object-cover"
                 />
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mx-auto max-w-7xl px-6 py-28 sm:py-32 lg:px-8">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="text-foreground text-4xl font-semibold tracking-tight sm:text-5xl">Frequently asked questions</h2>
+        <dl class="divide-foreground/10 mt-16 divide-y">
+          <FaqItem v-for="(faq, index) in faqs" :key="index" :question="faq.question" :answer="faq.answer" />
+        </dl>
+      </div>
+    </div>
+
+    <!-- CTA section -->
+    <div class="relative -z-10 mt-32 px-6 lg:px-8">
+      <div
+        aria-hidden="true"
+        class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 transform-gpu justify-center overflow-hidden blur-3xl sm:top-auto sm:right-[calc(50%-6rem)] sm:bottom-0 sm:translate-y-0 sm:justify-end"
+      >
+        <div
+          style="
+            clip-path: polygon(
+              73.6% 48.6%,
+              91.7% 88.5%,
+              100% 53.9%,
+              97.4% 18.1%,
+              92.5% 15.4%,
+              75.7% 36.3%,
+              55.3% 52.8%,
+              46.5% 50.9%,
+              45% 37.4%,
+              50.3% 13.1%,
+              21.3% 36.2%,
+              0.1% 0.1%,
+              5.4% 49.1%,
+              21.4% 36.4%,
+              58.9% 100%,
+              73.6% 48.6%
+            );
+          "
+          class="to-primary aspect-1108/632 w-277 flex-none bg-linear-to-r from-[#4115fc] opacity-25"
+        ></div>
+      </div>
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-foreground text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
+          Let's Talk About Your Project
+        </h2>
+        <p class="text-muted-foreground mx-auto mt-6 max-w-xl text-lg/8 text-pretty">
+          No pressure, no sales pitch. Just an honest conversation about what you're trying to build, the challenges
+          you're facing, and whether working together makes sense.
+        </p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <div class="mt-10 flex items-center justify-center sm:gap-x-6">
+            <UiButton as="a" href="/contact" size="lg">Let's Work Together</UiButton>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-hidden="true"
+        class="absolute top-full right-0 left-1/2 -z-10 hidden -translate-y-1/2 transform-gpu overflow-hidden blur-3xl sm:block"
+      >
+        <div
+          style="
+            clip-path: polygon(
+              74.1% 44.1%,
+              100% 61.6%,
+              97.5% 26.9%,
+              85.5% 0.1%,
+              80.7% 2%,
+              72.5% 32.5%,
+              60.2% 62.4%,
+              52.4% 68.1%,
+              47.5% 58.3%,
+              45.2% 34.5%,
+              27.5% 76.7%,
+              0.1% 64.9%,
+              17.9% 100%,
+              27.6% 76.8%,
+              76.1% 97.7%,
+              74.1% 44.1%
+            );
+          "
+          class="to-primary aspect-1155/678 w-288.75 bg-linear-to-tr from-[#4115fc] opacity-30"
+        ></div>
       </div>
     </div>
   </main>
