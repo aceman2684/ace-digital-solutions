@@ -4,31 +4,31 @@
       icon: "mdi:magnify",
       title: "Discovery",
       description:
-        "We start by understanding your goals, challenges, and vision. This helps us create a solution that actually fits your needs—not a one-size-fits-all approach.",
+        "Your goals, challenges, and vision come first. This ensures you get a solution that actually fits your needs, not a one-size-fits-all approach.",
     },
     {
       icon: "mdi:design",
       title: "Design & Planning",
       description:
-        "We map out the technical approach, user experience, and project timeline together. You'll know exactly what to expect before we write a single line of code.",
+        "The technical approach, user experience, and project timeline get mapped out in detail. You'll know exactly what to expect before a single line of code is written.",
     },
     {
       icon: "mdi:code",
       title: "Development",
       description:
-        "Some clients love regular demos and staying involved throughout. Others prefer to check in at key milestones. We'll work the way that makes sense for you and your team.",
+        "Love regular demos and staying involved throughout? Prefer to check in at key milestones? You'll get the collaboration style that makes sense for you and your team.",
     },
     {
       icon: "mdi:rocket-launch",
       title: "Testing & Launch",
       description:
-        "We put everything through rigorous testing to ensure it works flawlessly. Then we handle the deployment and make sure you're confident using your new solution.",
+        "Everything goes through rigorous testing to ensure it works flawlessly. Then deployment is handled smoothly so you're confident using your new solution.",
     },
     {
       icon: "mdi:wrench",
       title: "Support & Growth",
       description:
-        "Launch is just the beginning. We provide ongoing support, monitor performance, and help you evolve the solution as your needs change.",
+        "Launch is just the beginning. You'll get ongoing support, performance monitoring, and help evolving the solution as your needs change.",
     },
   ];
 </script>
@@ -126,8 +126,8 @@
           </h1>
           <div class="mx-auto max-w-2xl sm:max-w-xl md:max-w-2xl lg:max-w-4xl">
             <p class="text-muted-foreground mt-8 text-lg font-medium text-pretty sm:text-xl/8">
-              Helping startups, nonprofits, and churches build their digital presence with professional development, API
-              integration, and full-stack support—without the enterprise price tag.
+              Helping startups, nonprofits, and mission-driven organizations build their digital presence with
+              professional development, API integration, and full-stack support. No enterprise price tag required.
             </p>
             <div class="mt-10 flex items-center justify-center sm:gap-x-6">
               <UiButton as="a" href="/contact" size="lg">Let's Work Together</UiButton>
@@ -149,13 +149,13 @@
         >
           <div class="lg:ml-auto lg:pt-4 lg:pl-4">
             <div class="lg:max-w-lg">
-              <h2 class="text-primary text-base/7 font-semibold">What We Do</h2>
+              <h2 class="text-primary text-base/7 font-semibold">What You Get</h2>
               <p class="text-foreground mt-2 text-4xl font-semibold tracking-tight text-pretty sm:text-5xl">
                 Technical Excellence Made Accessible
               </p>
               <p class="text-muted-foreground mt-6 text-lg/8">
-                We deliver the technical capabilities your organization needs—custom web development, API integrations,
-                and ongoing support with transparent pricing that puts you first.
+                Custom web development, API integrations, and ongoing support with transparent pricing that puts you
+                first.
               </p>
               <dl class="text-muted-foreground mt-10 max-w-xl space-y-8 text-base/7 lg:max-w-none">
                 <div class="relative pl-9">
@@ -215,12 +215,12 @@
     <!-- Process Section -->
     <div class="isolate mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
       <div class="mx-auto max-w-2xl lg:mx-0">
-        <h2 class="text-primary text-base/7 font-semibold">How We Do It</h2>
+        <h2 class="text-primary text-base/7 font-semibold">How It Works</h2>
         <p class="text-foreground mt-2 text-4xl font-semibold tracking-tight text-pretty sm:text-5xl">
           A Clear Path from Idea to Launch
         </p>
         <p class="text-muted-foreground mt-6 text-lg/8">
-          Every project is different, but our approach stays consistent—collaborative, transparent, and focused on
+          Every project is different, but the approach stays consistent: collaborative, transparent, and focused on
           delivering real value at every stage.
         </p>
       </div>
@@ -234,6 +234,64 @@
             :description="item.description"
             :class="{ 'lg:ml-2': index !== 0 }"
           />
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Us Section -->
+    <div class="mt-32 overflow-hidden sm:mt-40">
+      <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+        <div
+          class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:max-w-none lg:min-w-full lg:flex-none lg:gap-y-8"
+        >
+          <div class="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
+            <h2 class="text-primary text-base/7 font-semibold">Why Pick Us</h2>
+            <h2 class="text-foreground text-4xl font-semibold tracking-tight sm:text-5xl">Mission Over Margin</h2>
+            <p class="text-muted-foreground mt-6 text-xl/8">
+              Mission-driven communities, growing startups, nonprofits making real change. Every organization deserves a
+              digital presence that reflects their purpose, not their budget.
+            </p>
+            <p class="text-muted-foreground mt-6 text-base/7">
+              This work didn't start to chase enterprise contracts or maximize billable hours. It started because
+              quality development shouldn't be reserved for Fortune 500 companies. Feeding families, building community,
+              launching your first product. When you partner here, you're working with someone who believes that helping
+              your organization succeed matters more than any profit margin.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
+            <div class="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
+              <img
+                src="https://images.unsplash.com/photo-1670272502246-768d249768ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80"
+                alt=""
+                class="aspect-7/5 w-148 max-w-none rounded-2xl bg-gray-50 object-cover max-sm:w-120"
+              />
+            </div>
+            <div
+              class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-148 lg:items-start lg:justify-end lg:gap-x-8"
+            >
+              <div class="order-first flex w-64 flex-none justify-end self-end max-sm:w-40 lg:w-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1605656816944-971cd5c1407f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                  alt=""
+                  class="aspect-4/3 w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
+                />
+              </div>
+              <div class="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
+                <NuxtImg
+                  src="/images/team-at-table.jpg"
+                  alt="Team collaborating around a table"
+                  class="aspect-7/5 w-148 max-w-none flex-none rounded-2xl object-cover max-sm:w-120"
+                />
+              </div>
+              <div class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
+                <NuxtImg
+                  src="/images/helping-hands.jpg"
+                  class="aspect-4/3 w-[24rem] max-w-none rounded-2xl object-cover"
+                  alt="People with joined hands in a show of teamwork and collaboration"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
