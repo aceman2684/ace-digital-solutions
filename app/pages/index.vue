@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  import { defaultDocument } from "@vueuse/core";
+
   const processItems = [
     {
       icon: "mdi:magnify",
@@ -178,10 +180,14 @@
               professional development, API integration, and full-stack support. No enterprise price tag required.
             </p>
             <div class="mt-10 flex items-center justify-center sm:gap-x-6">
-              <UiButton as="a" href="/contact" size="lg">Let's Work Together</UiButton>
-              <UiButton as="a" href="/about" variant="ghost" size="lg">
+              <Button as="a" href="/contact" size="lg">Let's Work Together</Button>
+              <Button
+                variant="ghost"
+                size="lg"
+                @click="() => defaultDocument?.getElementById('what-we-do')?.scrollIntoView({ behavior: 'smooth' })"
+              >
                 Learn more <span aria-hidden="true">&rarr;</span>
-              </UiButton>
+              </Button>
             </div>
           </div>
         </div>
@@ -190,7 +196,7 @@
     </div>
 
     <!-- What We Do Section -->
-    <div class="bg-background flex overflow-hidden py-24 sm:py-32">
+    <div id="what-we-do" class="bg-background flex overflow-hidden py-24 sm:py-32">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div
           class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
@@ -400,7 +406,7 @@
         </p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <div class="mt-10 flex items-center justify-center sm:gap-x-6">
-            <UiButton as="a" href="/contact" size="lg">Let's Work Together</UiButton>
+            <Button as="a" href="/contact" size="lg">Let's Work Together</Button>
           </div>
         </div>
       </div>

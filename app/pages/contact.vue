@@ -128,11 +128,11 @@
       <p class="mt-2 text-lg/8 text-gray-600">Share your vision and we'll explore the best path forward together.</p>
     </div>
     <form novalidate class="mx-auto mt-16 max-w-xl sm:mt-20" @submit="handleSubmit">
-      <UiFieldSet>
-        <UiFieldGroup class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
-          <UiField :data-invalid="isFieldInvalid('firstName')">
-            <UiFieldLabel for="firstName" class="font-semibold">First Name</UiFieldLabel>
-            <UiInput
+      <FieldSet>
+        <FieldGroup class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+          <Field :data-invalid="isFieldInvalid('firstName')">
+            <FieldLabel for="firstName" class="font-semibold">First Name</FieldLabel>
+            <Input
               id="firstName"
               v-model="formData.firstName"
               type="text"
@@ -141,11 +141,11 @@
               class="bg-background"
               :aria-invalid="isFieldInvalid('firstName')"
             />
-            <UiFieldError v-if="isFieldInvalid('firstName')">{{ formErrors.firstName }}</UiFieldError>
-          </UiField>
-          <UiField :data-invalid="isFieldInvalid('lastName')">
-            <UiFieldLabel for="lastName" class="font-semibold">Last Name</UiFieldLabel>
-            <UiInput
+            <FieldError v-if="isFieldInvalid('firstName')">{{ formErrors.firstName }}</FieldError>
+          </Field>
+          <Field :data-invalid="isFieldInvalid('lastName')">
+            <FieldLabel for="lastName" class="font-semibold">Last Name</FieldLabel>
+            <Input
               id="lastName"
               v-model="formData.lastName"
               type="text"
@@ -154,11 +154,11 @@
               class="bg-background"
               :aria-invalid="isFieldInvalid('lastName')"
             />
-            <UiFieldError v-if="isFieldInvalid('lastName')">{{ formErrors.lastName }}</UiFieldError>
-          </UiField>
-          <UiField class="sm:col-span-2" :data-invalid="isFieldInvalid('email')">
-            <UiFieldLabel for="email" class="font-semibold">Email</UiFieldLabel>
-            <UiInput
+            <FieldError v-if="isFieldInvalid('lastName')">{{ formErrors.lastName }}</FieldError>
+          </Field>
+          <Field class="sm:col-span-2" :data-invalid="isFieldInvalid('email')">
+            <FieldLabel for="email" class="font-semibold">Email</FieldLabel>
+            <Input
               id="email"
               v-model="formData.email"
               type="email"
@@ -167,14 +167,14 @@
               class="bg-background"
               :aria-invalid="isFieldInvalid('email')"
             />
-            <UiFieldError v-if="isFieldInvalid('email')">{{ formErrors.email }}</UiFieldError>
-          </UiField>
-          <UiField class="sm:col-span-2">
+            <FieldError v-if="isFieldInvalid('email')">{{ formErrors.email }}</FieldError>
+          </Field>
+          <Field class="sm:col-span-2">
             <div class="flex justify-between text-sm">
-              <UiFieldLabel for="phoneNumber" class="font-semibold">Phone Number</UiFieldLabel>
+              <FieldLabel for="phoneNumber" class="font-semibold">Phone Number</FieldLabel>
               <span class="text-muted-foreground ml-auto font-normal">Optional</span>
             </div>
-            <UiInput
+            <Input
               id="phoneNumber"
               v-model="formData.phoneNumber"
               v-maska="'+1 (###) ###-####'"
@@ -183,13 +183,13 @@
               autocomplete="tel"
               class="bg-background"
             />
-          </UiField>
-          <UiField class="sm:col-span-2" :data-invalid="isFieldInvalid('message')">
+          </Field>
+          <Field class="sm:col-span-2" :data-invalid="isFieldInvalid('message')">
             <div class="flex justify-between text-sm">
-              <UiFieldLabel for="message" class="font-semibold">Message</UiFieldLabel>
+              <FieldLabel for="message" class="font-semibold">Message</FieldLabel>
               <span class="text-muted-foreground ml-auto font-normal">Max 500 characters</span>
             </div>
-            <UiTextarea
+            <Textarea
               id="message"
               v-model="formData.message"
               name="message"
@@ -198,22 +198,22 @@
               class="bg-background"
               :aria-invalid="isFieldInvalid('message')"
             />
-            <UiFieldError v-if="isFieldInvalid('message')">{{ formErrors.message }}</UiFieldError>
-          </UiField>
-          <UiField orientation="horizontal" class="sm:col-span-2">
-            <UiSwitch id="agreeToTerms" v-model="formData.agreeToTerms" name="agreeToTerms" />
-            <UiFieldLabel for="agreeToTerms" class="text-muted-foreground gap-1">
+            <FieldError v-if="isFieldInvalid('message')">{{ formErrors.message }}</FieldError>
+          </Field>
+          <Field orientation="horizontal" class="sm:col-span-2">
+            <Switch id="agreeToTerms" v-model="formData.agreeToTerms" name="agreeToTerms" />
+            <FieldLabel for="agreeToTerms" class="text-muted-foreground gap-1">
               By selecting this, you agree to our
               <NuxtLink to="/privacy-policy" class="text-primary font-semibold text-nowrap"> privacy policy </NuxtLink>
-            </UiFieldLabel>
-          </UiField>
-        </UiFieldGroup>
-      </UiFieldSet>
+            </FieldLabel>
+          </Field>
+        </FieldGroup>
+      </FieldSet>
       <div class="mt-10">
-        <UiButton type="submit" class="w-full" size="lg" :disabled="!formData.agreeToTerms || isSubmitting">
-          <template v-if="isSubmitting"><UiSpinner class="mr-2" /> Sending...</template>
+        <Button type="submit" class="w-full" size="lg" :disabled="!formData.agreeToTerms || isSubmitting">
+          <template v-if="isSubmitting"><Spinner class="mr-2" /> Sending...</template>
           <template v-else>Send Message</template>
-        </UiButton>
+        </Button>
       </div>
     </form>
   </main>

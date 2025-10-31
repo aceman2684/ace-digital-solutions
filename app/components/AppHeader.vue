@@ -40,7 +40,7 @@
         </NavItem>
       </div>
       <div class="hidden md:items-center lg:flex lg:flex-1 lg:justify-end">
-        <UiButton as="a" href="/contact">Get in Touch</UiButton>
+        <Button as="a" href="/contact">Get in Touch</Button>
       </div>
     </nav>
 
@@ -60,7 +60,7 @@
             <NavItem v-for="link in mobileLinks" :key="link.name" :to="link.to">{{ link.name }}</NavItem>
           </div>
           <div class="px-6 pt-4 pb-3">
-            <UiButton as="a" href="/contact" class="w-full" size="lg">Get in Touch</UiButton>
+            <Button as="a" href="/contact" class="w-full" size="lg">Get in Touch</Button>
           </div>
         </div>
       </div>
