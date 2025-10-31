@@ -46,6 +46,11 @@
         "Pricing varies significantly based on your specific needs and project scope. The goal isn't to hit a standard rate, it's to find an approach that works within your budget while delivering real value. After our discovery call, you'll get a detailed proposal with clear pricing before any work begins. No surprise fees, no hidden costs. Whether it's a landing page or a full web application, we'll explore what's possible within your constraints.",
     },
     {
+      question: "Can you work with our budget constraints?",
+      answer:
+        "Budget transparency is part of the process. During discovery, we'll discuss your budget and find an approach that delivers real value within your constraints. If a full solution isn't feasible, we'll explore phased approaches or alternative options rather than overpromise.",
+    },
+    {
       question: "How long does it take to build a website?",
       answer:
         "Timeline depends on scope and complexity. A landing page might take 2-3 weeks, while a full web application could take 2-3 months. During the Design & Planning phase, you'll get a detailed timeline before development starts, so you know exactly what to expect.",
@@ -74,11 +79,6 @@
       question: "What if we're not sure exactly what we need yet?",
       answer:
         "That's what the discovery phase is for. Many clients start with a general vision and unclear requirements. Through conversation and collaboration, we'll map out exactly what you need, what you don't, and what makes sense for your budget and timeline.",
-    },
-    {
-      question: "Can you work with our budget constraints?",
-      answer:
-        "Budget transparency is part of the process. During discovery, we'll discuss your budget and find an approach that delivers real value within your constraints. If a full solution isn't feasible, we'll explore phased approaches or alternative options rather than overpromise.",
     },
   ];
 </script>
@@ -180,7 +180,9 @@
               professional development, API integration, and full-stack support. No enterprise price tag required.
             </p>
             <div class="mt-10 flex items-center justify-center sm:gap-x-6">
-              <Button as="a" href="/contact" size="lg">Let's Work Together</Button>
+              <Button as-child size="lg">
+                <NuxtLink to="/contact">Let's Work Together</NuxtLink>
+              </Button>
               <Button
                 variant="ghost"
                 size="lg"
@@ -406,7 +408,9 @@
         </p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <div class="mt-10 flex items-center justify-center sm:gap-x-6">
-            <Button as="a" href="/contact" size="lg">Let's Work Together</Button>
+            <Button as-child size="lg">
+              <NuxtLink to="/contact">Let's Work Together</NuxtLink>
+            </Button>
           </div>
         </div>
       </div>

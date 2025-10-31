@@ -40,7 +40,9 @@
         </NavItem>
       </div>
       <div class="hidden md:items-center lg:flex lg:flex-1 lg:justify-end">
-        <Button as="a" href="/contact">Get in Touch</Button>
+        <Button as-child>
+          <NuxtLink to="/contact">Get in Touch</NuxtLink>
+        </Button>
       </div>
     </nav>
 
